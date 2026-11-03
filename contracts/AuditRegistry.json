@@ -1,0 +1,135 @@
+{
+  "contractName": "AuditRegistry",
+  "compiler": "solc 0.8.24+commit.e11b9ed9.Emscripten.clang",
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "paris"
+  },
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "reportHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "contractHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "auditor",
+          "type": "address"
+        }
+      ],
+      "name": "Attested",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "reportHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "contractHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "attest",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "attestations",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "reportHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "contractHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "auditor",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "reportHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "verify",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610257806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806375e36616146100465780638acbf78e146100e4578063940992a3146100f9575b600080fd5b6100b06100543660046101e6565b60009081526020818152604091829020825160a0810184528154808252600183015493820184905260028301546001600160a01b0316948201859052600383015460608301819052600490930154608090920182905294929392565b6040805195865260208601949094526001600160a01b03929092168484015260608401526080830152519081900360a00190f35b6100f76100f23660046101ff565b610140565b005b6100b06101073660046101e6565b60006020819052908152604090208054600182015460028301546003840154600490940154929391926001600160a01b03909116919085565b6040805160a0810182528381526020808201848152338385018181524260608601908152436080870190815260008a815295869052878620965187559351600187015590516002860180546001600160a01b0319166001600160a01b03909216919091179055516003850155905160049093019290925591519091839185917f2f8e66b1207a4b70274a2a3da88ffb5737c8214576490da1b35acc38b2d62db691a45050565b6000602082840312156101f857600080fd5b5035919050565b6000806040838503121561021257600080fd5b5050803592602090910135915056fea2646970667358221220b6af3d54ee2507dab4bed0ad9952f89ecc1b5a79497ee16a0640538fc8dbd97c64736f6c63430008180033"
+}
